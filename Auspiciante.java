@@ -26,7 +26,7 @@ public class Auspiciante extends Persona {
     public static void agregarAuspiciantes(){
         Scanner sc=new Scanner(System.in);
         
-        int opcion_user = 0;
+        int opcion_user = 1;
         
         while(opcion_user!=2){
             
