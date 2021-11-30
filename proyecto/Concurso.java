@@ -187,7 +187,7 @@ public class Concurso {
         
         for(Concurso c: concursosAbiertos){
 
-            if(c.idConcurso==id){
+            if(c.idConcurso==id ){
                 
                 System.out.println("Nombre,  Tipo de Mascota,  ID");
                 Mascota.mostrarMascotas();
@@ -198,6 +198,7 @@ public class Concurso {
                 for (Mascota m:Mascota.mascotas){
                     if(m.getIdMascota()==idM){
                         c.mascotasInscrita.add(m);
+                        Mascota.mascotasQueParticiparon.add(m);
                     }
                 }
             }else{
