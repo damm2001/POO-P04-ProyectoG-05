@@ -65,7 +65,7 @@ public class Concurso {
             
             //Ciudad del evento
             Ciudad.mostrarCiudades();
-            System.out.print("Indique el nombre de la ciudad: ");
+            System.out.print("\nIndique el nombre de la ciudad: ");
             String ciudad =sc.nextLine();
             Ciudad ciudad_user=new Ciudad();
 
@@ -102,17 +102,24 @@ public class Concurso {
             System.out.print("Ingrese la fecha del cierre de inscripcion: ");
             fecha = sc.nextLine();
             LocalDate fechaFin=LocalDate.parse(fecha);
+            System.out.println();
 
             //Seleccion del AUSPICIANTE
             ArrayList<Auspiciante> listAuspiciante=new ArrayList<Auspiciante>();
             Auspiciante.mostrarAuspiciantes();
-            System.out.print("Seleccione al auspiciante: ");
+            System.out.print("\nIndique el nombre del auspiciante: ");
             String ausp =sc.nextLine();
 
+            int n1=0;
             for(Auspiciante a:auspiciantes){
                 if (a.nombre.equals(ausp)){
                     listAuspiciante.add(a);
+                    n1+=1;
                 }
+            }
+            if (n1==0){
+                System.out.println("Auspiciante no registrado en el sistema.");
+                metodoMenu();
             }
             
             //Lugar del Evento
@@ -133,7 +140,7 @@ public class Concurso {
             }
 
             //INGRESO DE PREMIOS
-            System.out.println("INGRESO DE PREMIOS ");
+            System.out.println("\nINGRESO DE PREMIOS ");
             ArrayList<Premio> listPremios = new ArrayList<Premio>();
             
             int op= 0;
