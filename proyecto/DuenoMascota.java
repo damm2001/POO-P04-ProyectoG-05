@@ -102,10 +102,5 @@ public class DuenoMascota extends Persona {
     public String toString() {
         return "DuenoMascota{" + "cedula=" + cedula + ", apellido=" + apellido + '}';
     }
-    
-    public static void main(String args[]) {
-        agregarDueños();
-        mostrarDueños();
-    }
 }  
   
