@@ -49,7 +49,6 @@ public class Main {
             System.out.println();
             Concurso.inscribirParticipantes(cod);
             System.out.println();
-            metodoMenu();
         } else if(opcion.equals("3")){
             metodoMenu();
         }

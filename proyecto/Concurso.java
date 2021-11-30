@@ -198,7 +198,6 @@ public class Concurso {
                         c.mascotasInscrita.add(Mascota.mascotas.get(ind));
                         Mascota.mascotasQueParticiparon.add(Mascota.mascotas.get(ind));
                         System.out.println("Mascota inscrita.\n");
-                        metodoMenu();
                     }else{
                         System.out.println("El concurso no está dirigido al tipo de mascota dado\nRegresando al menu principal\n");
                         }metodoMenu();
