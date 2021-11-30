@@ -36,10 +36,9 @@ public class Premio {
             
         if(tiene.equals("Si")){
             for(Auspiciante a:lista){
-                System.out.print(a.nombre);
+                System.out.print("Auspiciante del concurso: "+a.nombre);
             }
-                
-            System.out.print("Escoja el auspiciante: ");
+            System.out.print("\nIndique el auspiciante del premio '"+puesto+"' : ");
             String ausp=sc.nextLine();
 
             for(Auspiciante a:lista){
