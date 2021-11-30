@@ -22,47 +22,37 @@ public class Premio {
         this.auspiciante=null;
     }
     
-    
-    
     public static Premio crearPremios(ArrayList<Auspiciante> lista){
-            Scanner sc=new Scanner(System.in);
-      
-            Premio premio = null;
             
-            System.out.print("Indique el puesto del premio (Ej: Primer Puesto): ");
-            String puesto=sc.nextLine();
-            System.out.print("Ingrese la descripcion del premio del evento: ");
-            String descripcion=sc.nextLine();
-            System.out.print("El premio tiene auspiciante? Si/No: ");
-            String tiene=sc.nextLine();
+        Scanner sc=new Scanner(System.in);
+        Premio premio = null;
             
-            if(tiene.equals("Si")){
-                for(Auspiciante a:lista){
-                    System.out.print(a.nombre);
-                }
-                
-                System.out.print("Escoja el auspiciante: ");
-                String ausp=sc.nextLine();
-
-                for(Auspiciante a:lista){
-                    if(a.nombre.equals(ausp)){
-                        premio=new Premio(puesto, descripcion, a);
-                        
-                        System.out.println("Premio creado.");
-                        //sc.close();
-                        //return premio;
-                    }
-                }
-                
-            } else{
-                premio=new Premio(puesto, descripcion);
-                System.out.println("Premio creado.");
-                //sc.close();
-                //return premio;
+        System.out.print("Indique el puesto del premio (Ej: Primer Puesto): ");
+        String puesto=sc.nextLine();
+        System.out.print("Ingrese la descripcion del premio del evento: ");
+        String descripcion=sc.nextLine();
+        System.out.print("El premio tiene auspiciante? Si/No: ");
+        String tiene=sc.nextLine();
+            
+        if(tiene.equals("Si")){
+            for(Auspiciante a:lista){
+                System.out.print(a.nombre);
             }
-        
-            
-            
+                
+            System.out.print("Escoja el auspiciante: ");
+            String ausp=sc.nextLine();
+
+            for(Auspiciante a:lista){
+                if(a.nombre.equals(ausp)){
+                    premio=new Premio(puesto, descripcion, a);     
+                    System.out.println("Premio creado.");
+                }
+            }
+                
+        }else{
+            premio=new Premio(puesto, descripcion);
+            System.out.println("Premio creado.");
+        }    
         return premio;
     }
 
