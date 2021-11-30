@@ -3,7 +3,6 @@ package proyecto;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Scanner;
 import static proyecto.DuenoMascota.duenosMascota;
 import static proyecto.Main.*;
 
@@ -33,7 +32,6 @@ public class Mascota {
     
     public static void agregarMascotas(){
         
-        Scanner sc=new Scanner(System.in);
         int opcion_user = 0;
         while(opcion_user!=2){
         
@@ -101,7 +99,6 @@ public class Mascota {
     }
     
     public static void eliminarMascotas(){
-        Scanner sc=new Scanner(System.in);
         System.out.print("Ingrese el id de la mascota: ");
         int id = sc.nextInt();
         sc.nextLine();

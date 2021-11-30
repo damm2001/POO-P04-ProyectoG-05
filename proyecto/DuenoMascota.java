@@ -2,7 +2,7 @@
 package proyecto;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+import static proyecto.Main.sc;
 
 public class DuenoMascota extends Persona {
     
@@ -20,7 +20,6 @@ public class DuenoMascota extends Persona {
         
     public static void agregarDueños(){
         
-        Scanner sc=new Scanner(System.in);
         int opcion_user = 0;
        
         while(opcion_user!=2){
@@ -69,7 +68,6 @@ public class DuenoMascota extends Persona {
     
     public static void modificarDueños(){
 
-        Scanner sc=new Scanner(System.in);
         System.out.print("Ingrese la cedula del dueño: ");
         String id = sc.nextLine();
 

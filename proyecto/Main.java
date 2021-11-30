@@ -14,7 +14,7 @@ import static proyecto.Mascota.*;
 
 public class Main {
 
-    static Scanner sc = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
     
     public static void metodoMenu(){
         System.out.println("1. Administrar Concursos\n2. Administrar Dueños\n3. Administrar Mascotas");

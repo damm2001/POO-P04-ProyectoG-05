@@ -4,7 +4,6 @@ package proyecto;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Scanner;
 import static proyecto.Main.*;
 import static proyecto.Auspiciante.auspiciantes;
 import static proyecto.Ciudad.ciudades;
@@ -57,7 +56,6 @@ public class Concurso {
     
     public static void agregarConcursos(){
 
-        Scanner sc=new Scanner(System.in);
         int opcion_user = 0;
 
         while(opcion_user!=2){
@@ -184,7 +182,6 @@ public class Concurso {
     }
     
     public static void inscribirParticipantes(int id){
-        Scanner sc=new Scanner(System.in);
         for(Concurso c: concursosAbiertos){
             if(c.idConcurso==id ){
                 

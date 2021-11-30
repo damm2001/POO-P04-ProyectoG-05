@@ -2,9 +2,10 @@
 package proyecto;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+import static proyecto.Main.sc;
 
 public class Premio {
+
     public String puesto;
     public String descripcion;
     public Auspiciante auspiciante;
@@ -22,8 +23,7 @@ public class Premio {
     }
     
     public static Premio crearPremios(ArrayList<Auspiciante> lista){
-            
-        Scanner sc=new Scanner(System.in);
+        
         Premio premio = null;
             
         System.out.print("Indique el puesto del premio (Ej: Primer Puesto): ");
