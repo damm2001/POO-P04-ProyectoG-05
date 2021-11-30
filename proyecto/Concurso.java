@@ -22,6 +22,7 @@ public class Concurso {
     private static int lastID;
     private int idConcurso;
     public static ArrayList<Concurso> concursos = new ArrayList<Concurso>();
+    public static ArrayList<Concurso> concursosAbiertos = new ArrayList<Concurso>();
     private ArrayList<Mascota> mascotasInscrita = new ArrayList<Mascota>();//Lista de mascotas inscritas en ese concurso
     private ArrayList<Mascota> ganadores = new ArrayList<Mascota>();
 
@@ -174,6 +175,7 @@ public class Concurso {
         for(Concurso c:concursos){
             if(fechaHoy.isBefore(c.fechaFin)){
                 System.out.println(c.toString());
+                concursosAbiertos.add(c);
             }
         }
     }
@@ -181,9 +183,12 @@ public class Concurso {
     public static void inscribirParticipantes(int id){
         
         Scanner sc=new Scanner(System.in);
+
         
-        for(Concurso c: concursos){
+        for(Concurso c: concursosAbiertos){
+
             if(c.idConcurso==id){
+                
                 System.out.println("Nombre,  Tipo de Mascota,  ID");
                 Mascota.mostrarMascotas();
                 System.out.print("\nIngrese el ID de la mascota: ");
@@ -195,6 +200,9 @@ public class Concurso {
                         c.mascotasInscrita.add(m);
                     }
                 }
+            }else{
+                System.out.println("Codigo de concurso incorrecto\nRegresando al menú principal\n");
+                metodoMenu();
             }
         }
     }
