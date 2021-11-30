@@ -71,7 +71,7 @@ public class DuenoMascota extends Persona {
         Scanner sc=new Scanner(System.in);
         System.out.print("Ingrese la cedula del dueño: ");
             String id = sc.nextLine();
-            duenosMascota.forEach(d-> {
+            for (DuenoMascota d: duenosMascota){
                 if (d.cedula.equals(id)){
                     System.out.println("DUEÑO: "+d.nombre+" "+d.apellido);
                     System.out.print("OPCIONES\n1. Direccion\n2. Telefono\n3. Email\n¿Que dato desea editar?: ");
@@ -90,7 +90,7 @@ public class DuenoMascota extends Persona {
                         d.email=email;
                     }
                 }
-            });
+            }System.out.println();
         
     }
 
