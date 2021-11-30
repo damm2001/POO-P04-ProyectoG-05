@@ -19,8 +19,8 @@ public class DuenoMascota extends Persona {
     public DuenoMascota() {}
         
     public static void agregarDueños(){
-        Scanner sc=new Scanner(System.in);
         
+        Scanner sc=new Scanner(System.in);
         int opcion_user = 0;
        
         while(opcion_user!=2){
@@ -54,6 +54,7 @@ public class DuenoMascota extends Persona {
     }
     
     public static void mostrarDueños(){
+
         if (!duenosMascota.isEmpty()){ //!(duenoMascota.size()==0)
             System.out.println("Lista de Dueños:");
             int n=1;
@@ -67,30 +68,30 @@ public class DuenoMascota extends Persona {
     }
     
     public static void modificarDueños(){
+
         Scanner sc=new Scanner(System.in);
         System.out.print("Ingrese la cedula del dueño: ");
-            String id = sc.nextLine();
-            for (DuenoMascota d: duenosMascota){
-                if (d.cedula.equals(id)){
-                    System.out.println("DUEÑO: "+d.nombre+" "+d.apellido);
-                    System.out.print("OPCIONES\n1. Direccion\n2. Telefono\n3. Email\n¿Que dato desea editar?: ");
-                    String op = sc.nextLine();
-                    if (op.equals("1")){
-                        System.out.print("Escriba la nueva direccion: ");
-                        String dir = sc.nextLine();
-                        d.direccion=dir;
-                    }else if(op.equals("2")){
-                        System.out.print("Escriba el nuevo telefono: ");
-                        String telf = sc.nextLine();
-                        d.telefono=telf;
-                    }else if(op.equals("3")){
-                        System.out.print("Escriba el nuevo email: ");
-                        String email = sc.nextLine();
-                        d.email=email;
-                    }
+        String id = sc.nextLine();
+        for (DuenoMascota d: duenosMascota){
+            if (d.cedula.equals(id)){
+                System.out.println("DUEÑO: "+d.nombre+" "+d.apellido);
+                System.out.print("OPCIONES\n1. Direccion\n2. Telefono\n3. Email\n¿Que dato desea editar?: ");
+                String op = sc.nextLine();
+                if (op.equals("1")){
+                    System.out.print("Escriba la nueva direccion: ");
+                    String dir = sc.nextLine();
+                    d.direccion=dir;
+                }else if(op.equals("2")){
+                    System.out.print("Escriba el nuevo telefono: ");
+                    String telf = sc.nextLine();
+                    d.telefono=telf;
+                }else if(op.equals("3")){
+                    System.out.print("Escriba el nuevo email: ");
+                    String email = sc.nextLine();
+                    d.email=email;
                 }
-            }System.out.println();
-        
+            }
+        }System.out.println();  
     }
 
     public String getNombre() {
