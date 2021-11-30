@@ -29,6 +29,8 @@ public class Main {
             admDuenos();
         } else if(opcion.equals("3")){
             admMascota();
+        }else{
+            System.out.println("Programa Finalizado.");
         }    
     }
     

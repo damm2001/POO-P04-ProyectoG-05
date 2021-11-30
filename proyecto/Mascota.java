@@ -70,6 +70,7 @@ public class Mascota {
             System.out.println("Mascota ingresada");
             //Ingreso de la mascota a la lista de Mascotas
             mascotas.add(mascota);
+            mascotasQueParticiparon.add(mascota);
             
             //opcion para seguir ingresando mascotas o salir
             System.out.println("\n1.-Seguir creando Mascotas \n2.-Salir");
