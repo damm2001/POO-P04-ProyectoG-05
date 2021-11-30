@@ -99,15 +99,22 @@ public class Mascota {
     public static void eliminarMascotas(){
         Scanner sc=new Scanner(System.in);
         System.out.print("Ingrese el id de la mascota: ");
-            int id = sc.nextInt();
-            sc.nextLine();
-            for(Mascota m:mascotasQueParticiparon){
-                if(m.getIdMascota()==id){
-                   mascotas.remove(m);
-                }
-            };System.out.println("Mascota eliminada.\n");
-        
+        int id = sc.nextInt();
+        sc.nextLine();
+
+        if (id<=mascotas.size()){
+            int ind=id-1;
+            if (id==mascotas.get(ind).getIdMascota()){
+                mascotas.remove(mascotas.get(ind));
+                System.out.println("Mascota eliminada.\n");
+            }else{
+                System.out.println("Id no encontrado.\nRegresando al menu principal\n");
+            }
+        }else{
+            System.out.println("Id incorrecto.\nRegresando al menu principal\n");
+        } 
     }
+
     public int getIdMascota() {
         return idMascota;
     }
