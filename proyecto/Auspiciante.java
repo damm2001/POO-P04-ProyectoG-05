@@ -20,14 +20,10 @@ public class Auspiciante extends Persona {
         sponsor =   id_sponsor;
     }
 
-    
-    
-    
     public static void agregarAuspiciantes(){
+        
         Scanner sc=new Scanner(System.in);
-        
         int opcion_user = 1;
-        
         while(opcion_user!=2){
             
             System.out.print("Ingrese el nombre del auspiciante: ");
@@ -41,10 +37,8 @@ public class Auspiciante extends Persona {
             System.out.print("Ingrese el nombre de la pagina web del auspiciante: ");
             String webpage=sc.nextLine();
             Auspiciante a=new Auspiciante(nombre,direccion,telefono,email,webpage);
-            
             auspiciantes.add(a);
-            
-            
+        
             System.out.println("Auspiciante ingresado.");
             System.out.println("\n1.-Crear Auspiciante \n2.-Salir");
             System.out.print("\nOpción del usuario: ");
