@@ -190,18 +190,28 @@ public class Concurso {
                 System.out.print("\nIngrese el ID de la mascota: ");
                 int idM= sc.nextInt();
                 sc.nextLine();
-                System.out.print("Mascota inscrita.\n");
-                for (Mascota m:Mascota.mascotas){
-                    if(m.getIdMascota()==idM && c.dirigido.equals(m.getTipo())){
-                        c.mascotasInscrita.add(m);
-                        Mascota.mascotasQueParticiparon.add(m);
-                    }
+            
+                if (Mascota.mascotas.size()>=idM){
+                    int ind = idM-1;
+                    System.out.println(Mascota.mascotas.get(ind).getTipo());
+
+                    if(c.dirigido.equals(Mascota.mascotas.get(ind).getTipo())){
+                        c.mascotasInscrita.add(Mascota.mascotas.get(ind));
+                        Mascota.mascotasQueParticiparon.add(Mascota.mascotas.get(ind));
+                        System.out.println("Mascota inscrita.\n");
+                        metodoMenu();
+                    }else{
+                        if (Mascota.mascotas.size() < idM ){
+                            System.out.println("Id no encontrado\n");
+                       }else{
+                            System.out.println("El concurso no está dirigido al tipo de mascota dado\n ");
+                        }}metodoMenu();
+                }}
+                    else{
+                    System.out.println("Codigo de concurso incorrecto\nRegresando al menú principal\n");
+                    metodoMenu();
                 }
-            }else{
-                System.out.println("Codigo de concurso incorrecto\nRegresando al menú principal\n");
-                metodoMenu();
             }
-        }
     }
 
     @Override
