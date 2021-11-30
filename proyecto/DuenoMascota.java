@@ -94,7 +94,7 @@ public class DuenoMascota extends Persona {
             }
         }
         if (m==0){
-            System.out.println("Cedula no registrada en el sistema\n");
+            System.out.println("Cedula no registrada en el sistema\nRegresando al menu principal\n");
         }
     }
 
