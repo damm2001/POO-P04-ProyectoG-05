@@ -147,7 +147,7 @@ public class Concurso {
             while(op!=2){
                 Premio p=Premio.crearPremios(listAuspiciante);
                 listPremios.add(p);
-                System.out.println("\n1.-Crear Premio \n2.-Salir");
+                System.out.println("\n1.-Continuar agregando Premios \n2.-Salir");
                 System.out.print("\nOpción del usuario: ");
                 op = sc.nextInt();
                 sc.nextLine();
@@ -172,7 +172,7 @@ public class Concurso {
         
         for(Concurso c:concursos){
             if(fechaHoy.isBefore(c.fechaFin)){
-                System.out.println(c.nombre);
+                System.out.println(c.toString());
             }
         }
     }
@@ -183,6 +183,7 @@ public class Concurso {
         
         for(Concurso c: concursos){
             if(c.idConcurso==id){
+                System.out.println("Nombre,  Tipo de Mascota,  ID");
                 Mascota.mostrarMascotas();
                 System.out.print("Ingrese el ID de la mascota: ");
                 int idM= sc.nextInt();
@@ -194,5 +195,9 @@ public class Concurso {
                 }
             }
         }
+    }
+    @Override
+    public String toString() {
+        return "Concurso: " + nombre + "   Codigo: " + idConcurso ;
     }
 }

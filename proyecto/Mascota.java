@@ -84,7 +84,7 @@ public class Mascota {
             System.out.println("Lista de Mascotas:");
             int n=1;
             for(Mascota m:mascotas){
-                System.out.println(n+".- "+m.nombre);
+                System.out.println(n+".- "+m.toString());
                 n++;
             }
         }else{
@@ -108,10 +108,10 @@ public class Mascota {
         return idMascota;
     }
     
-    
-
     @Override
     public String toString() {
-        return "Mascota{" + "nombre=" + nombre + ", tipo=" + tipo + ", raza=" + raza + ", fechaNacimiento=" + fechaNacimiento + ", foto=" + foto + ", dueno=" + dueno + '}';
+        return nombre + "   " + tipo + "   " + idMascota;
     }
+
+    
 }
