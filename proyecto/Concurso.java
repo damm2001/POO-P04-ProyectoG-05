@@ -122,7 +122,7 @@ public class Concurso {
                 }
             }
             if (n1==0){
-                System.out.println("Auspiciante no registrado en el sistema.");
+                System.out.println("Auspiciante no registrado en el sistema.\nRegresando al menu principal\n");
                 metodoMenu();
             }
             
@@ -162,10 +162,11 @@ public class Concurso {
             concursos.add(concurso);
             
             System.out.println("Concurso creado.");
-            System.out.println("\n1.-Crear Concurso \n2.-Salir");
+            System.out.println("\n1.-Seguir creando Concursos \n2.-Salir");
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
+            System.out.println();
         }
     }
     
