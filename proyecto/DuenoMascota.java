@@ -77,15 +77,15 @@ public class DuenoMascota extends Persona {
                     System.out.print("OPCIONES\n1. Direccion\n2. Telefono\n3. Email\n¿Que dato desea editar?: ");
                     String op = sc.nextLine();
                     if (op.equals("1")){
-                        System.out.println("Escriba la nueva direccion: ");
+                        System.out.print("Escriba la nueva direccion: ");
                         String dir = sc.nextLine();
                         d.direccion=dir;
                     }else if(op.equals("2")){
-                        System.out.println("Escriba el nuevo telefono: ");
+                        System.out.print("Escriba el nuevo telefono: ");
                         String telf = sc.nextLine();
                         d.telefono=telf;
                     }else if(op.equals("3")){
-                        System.out.println("Escriba el nuevo email: ");
+                        System.out.print("Escriba el nuevo email: ");
                         String email = sc.nextLine();
                         d.email=email;
                     }
