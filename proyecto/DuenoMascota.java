@@ -47,7 +47,7 @@ public class DuenoMascota extends Persona {
             //Agregamos al dueño al regsitro
             duenosMascota.add(dueno);
             System.out.println("Dueño creado.");
-            System.out.println("\n1.-Crear Dueño \n2.-Salir");
+            System.out.println("\n1.-Seguir creando Dueños \n2.-Salir");
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
@@ -74,11 +74,7 @@ public class DuenoMascota extends Persona {
             duenosMascota.forEach(d-> {
                 if (d.cedula.equals(id)){
                     System.out.println("DUEÑO: "+d.nombre+" "+d.apellido);
-                    System.out.println("OPCIONES");
-                    System.out.println("1. Direccion");
-                    System.out.println("2. Telefono");
-                    System.out.println("3. Email");
-                    System.out.println("¿Que dato desea editar?: ");
+                    System.out.print("OPCIONES\n1. Direccion\n2. Telefono\n3. Email\n¿Que dato desea editar?: ");
                     String op = sc.nextLine();
                     if (op.equals("1")){
                         System.out.println("Escriba la nueva direccion: ");
@@ -111,5 +107,5 @@ public class DuenoMascota extends Persona {
         agregarDueños();
         mostrarDueños();
     }
-    
+
 }   
