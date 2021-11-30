@@ -59,17 +59,16 @@ public class Main {
         DuenoMascota.mostrarDueños();
         System.out.println("\n4. Crear Dueño\n5. Editar dueño\n6. Regresar al menú principal");
         System.out.print("\nElija una opcion: ");
-        int opcion=sc.nextInt();
-        sc.nextLine();
+        String opcion=sc.nextLine();
         System.out.println();
         
-        if(opcion==4){
+        if(opcion.equals("4")){
             DuenoMascota.agregarDueños();
             metodoMenu();
-        } else if(opcion==5){
+        } else if(opcion.equals("5")){
             DuenoMascota.modificarDueños();
             metodoMenu();
-        } else if(opcion==6){
+        } else if(opcion.equals("6")){
             metodoMenu();
         }
     }
@@ -202,7 +201,7 @@ public class Main {
         mascInscritas2.add(m8);
         mascInscritas2.add(m9);
         mascInscritas2.add(m10);
-        c.setMascotasInscrita(mascInscritas);
+        con1.setMascotasInscrita(mascInscritas2);
         concursos.add(con1);
 
         for(Mascota m:mascotas){

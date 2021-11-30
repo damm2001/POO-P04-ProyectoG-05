@@ -193,7 +193,6 @@ public class Concurso {
             
                 if (Mascota.mascotas.size()>=idM){
                     int ind = idM-1;
-                    System.out.println(Mascota.mascotas.get(ind).getTipo());
 
                     if(c.dirigido.equals(Mascota.mascotas.get(ind).getTipo())){
                         c.mascotasInscrita.add(Mascota.mascotas.get(ind));
