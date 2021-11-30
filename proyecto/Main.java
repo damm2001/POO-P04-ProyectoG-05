@@ -19,7 +19,7 @@ public class Main {
     public static void metodoMenu(){
         
         System.out.println("1. Administrar Concursos\n2. Administrar Dueños\n3. Administrar Mascotas");
-        System.out.print("Elija una opcion: ");
+        System.out.print("\nElija una opcion: ");
         String opcion=sc.nextLine();
         System.out.println();
 
@@ -35,7 +35,7 @@ public class Main {
     public static void admConcurso(){
        
         System.out.println("1. Crear Concurso\n2. Inscribir Participante\n3. Regresar al menú principal");
-        System.out.print("Elija una opcion: ");
+        System.out.print("\nElija una opcion: ");
         String opcion=sc.nextLine();
         System.out.println();
         
@@ -58,7 +58,7 @@ public class Main {
     public static void admDuenos(){
         DuenoMascota.mostrarDueños();
         System.out.println("\n4. Crear Dueño\n5. Editar dueño\n6. Regresar al menú principal");
-        System.out.print("Elija una opcion: ");
+        System.out.print("\nElija una opcion: ");
         int opcion=sc.nextInt();
         sc.nextLine();
         System.out.println();
@@ -77,7 +77,7 @@ public class Main {
     public static void admMascota(){
         Mascota.mostrarMascotas();
         System.out.println("\n7. Crear mascota\n8. Eliminar mascota\n9. Regresar al menú principal");
-        System.out.print("Elija una opcion: ");
+        System.out.print("\nElija una opcion: ");
         String opcion=sc.nextLine();
         System.out.println();
     

@@ -103,7 +103,7 @@ public class Mascota {
                 if(m.getIdMascota()==id){
                    mascotas.remove(m);
                 }
-            };
+            };System.out.println("Mascota eliminada.\n");
         
     }
     public int getIdMascota() {

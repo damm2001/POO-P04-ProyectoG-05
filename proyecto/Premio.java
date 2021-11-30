@@ -43,15 +43,13 @@ public class Premio {
 
             for(Auspiciante a:lista){
                 if(a.nombre.equals(ausp)){
-                    premio=new Premio(puesto, descripcion, a);     
-                    System.out.println("Premio creado.");
+                    premio=new Premio(puesto, descripcion, a); 
                 }
             }
                 
         }else{
             premio=new Premio(puesto, descripcion);
-            System.out.println("Premio creado.");
-        }    
+        }System.out.println("Premio creado."); 
         return premio;
     }
 
