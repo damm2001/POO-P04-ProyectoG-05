@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DuenoMascota extends Persona {
+    
     protected String cedula;
     protected String apellido;
     public static ArrayList<DuenoMascota> duenosMascota = new ArrayList<DuenoMascota>();

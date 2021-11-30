@@ -9,6 +9,7 @@ import static proyecto.Ciudad.ciudades;
 import static proyecto.Main.*;
 
 public class Concurso {
+
     private String nombre;
     private LocalDate fechaEvento;
     private LocalTime horaEvento;
@@ -43,14 +44,6 @@ public class Concurso {
     this.ganadores=new ArrayList<Mascota>();
     idConcurso=lastID+1;
     lastID=idConcurso;
-    }
-
-    public void setMascotasInscrita(ArrayList<Mascota> mascotasInscrita) {
-        this.mascotasInscrita = mascotasInscrita;
-    }
-
-    public void setGanadores(ArrayList<Mascota> ganadores) {
-        this.ganadores = ganadores;
     }
     
     public static void agregarConcursos(){
