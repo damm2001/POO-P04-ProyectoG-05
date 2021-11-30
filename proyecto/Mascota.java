@@ -29,11 +29,9 @@ public class Mascota {
     }
     
     public static void agregarMascotas(){
+        
         Scanner sc=new Scanner(System.in);
-        System.out.println("Opciones: \n1.-Crear Mascota \n2.-Salir");
-        System.out.print("\nOpción del usuario: ");
-        int opcion_user = sc.nextInt();
-        sc.nextLine();
+        int opcion_user = 0;
         while(opcion_user!=2){
         
             System.out.print("Ingrese el nombre de la mascota: ");
@@ -54,8 +52,11 @@ public class Mascota {
             LocalDate fechaNacimiento=LocalDate.parse(fecha);
             System.out.print("Ingrese la foto: ");
             String foto = sc.nextLine();
-            System.out.print("Ingrese el dueño: ");
+            System.out.println();
+            DuenoMascota.mostrarDueños();
+            System.out.print("\nIngrese el nombre del dueño: ");
             String dueno1 = sc.nextLine();
+
             DuenoMascota dueno= new DuenoMascota();
             for(DuenoMascota d:duenosMascota){
                 if (dueno1.equals(d.getNombre())){
@@ -70,12 +71,12 @@ public class Mascota {
             mascotas.add(mascota);
             
             //opcion para seguir ingresando mascotas o salir
-            System.out.println("\n1.-Crear Mascota \n2.-Salir");
+            System.out.println("\n1.-Seguir creando Mascotas \n2.-Salir");
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
             
-        }sc.close();
+        }
     }
     
     
