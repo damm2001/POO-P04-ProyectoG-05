@@ -160,7 +160,7 @@ public class Concurso {
             concursos.add(concurso);
             
             System.out.println("Concurso creado.");
-            System.out.println("\n1.-Crear Concurso \n2.-Salir");
+            System.out.println("\n1.-Seguir creando Concursos \n2.-Salir");
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();

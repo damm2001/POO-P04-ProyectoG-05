@@ -51,6 +51,7 @@ public class DuenoMascota extends Persona {
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
+            System.out.println();
         }
     }
     

@@ -76,7 +76,7 @@ public class Mascota {
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
-            
+            System.out.println();
         }
     }
     
