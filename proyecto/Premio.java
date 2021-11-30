@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import static proyecto.Auspiciante.auspiciantes;
 
-
-
 public class Premio {
     public String puesto;
     public String descripcion;

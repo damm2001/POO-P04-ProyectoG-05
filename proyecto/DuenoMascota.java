@@ -18,11 +18,7 @@ public class DuenoMascota extends Persona {
         
     }
 
-    public DuenoMascota() {
-        
-    }
-    
-    
+    public DuenoMascota() {}
     
     public static void agregarDueños(){
         Scanner sc=new Scanner(System.in);
@@ -30,7 +26,6 @@ public class DuenoMascota extends Persona {
         int opcion_user = 0;
        
         while(opcion_user!=2){
-            
             
             System.out.print("Ingrese el numero de cédula del dueño: ");
             String ced = sc.nextLine();
@@ -56,7 +51,7 @@ public class DuenoMascota extends Persona {
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
-        }//sc.close();
+        }
     }
     
     public static void mostrarDueños(){

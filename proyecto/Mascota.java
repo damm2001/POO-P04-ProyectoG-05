@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import static proyecto.DuenoMascota.duenosMascota;
 
-
-
 public class Mascota {
     private String nombre;
     private TipoMascota tipo;

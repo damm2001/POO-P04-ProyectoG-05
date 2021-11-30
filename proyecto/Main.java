@@ -180,9 +180,7 @@ public class Main {
         ganadores.add(m3);
         ganadores.add(m5);
         c.setGanadores(ganadores);
-        
         concursos.add(c);
-        
         
         //Creacion del premio para concurso vigente
         Premio p2=new Premio("Primer Puesto","Moto",a2);
@@ -204,9 +202,6 @@ public class Main {
         mascInscritas2.add(m9);
         mascInscritas2.add(m10);
         c.setMascotasInscrita(mascInscritas);
-        //Asignacion de los ganadores del concurso vigente 
-      
-        
         concursos.add(con1);
         metodoMenu();
      }  
