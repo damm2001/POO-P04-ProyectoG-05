@@ -215,6 +215,12 @@ public class Concurso {
         }
     }
 
+    //Este método no se utiliza en este primer avance 
+    public void enviarEmail(){}
+
+    //Este método no se utiliza en este primer avance
+    public void consultarGanadores(){}
+    
     @Override
     public String toString() {
         return "Concurso: " + nombre + "   Codigo: " + idConcurso ;
