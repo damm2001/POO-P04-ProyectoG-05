@@ -4,8 +4,6 @@ package proyecto;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 public class DuenoMascota extends Persona {
     protected String cedula;
     protected String apellido;
@@ -15,11 +13,10 @@ public class DuenoMascota extends Persona {
         super(nombre, direccion, telefono, email);
         this.cedula = cedula;
         this.apellido = apellido;
-        
     }
 
     public DuenoMascota() {}
-    
+        
     public static void agregarDueños(){
         Scanner sc=new Scanner(System.in);
         
@@ -97,11 +94,6 @@ public class DuenoMascota extends Persona {
 
     public String getNombre() {
         return nombre;
-    }
-
-    @Override
-    public String toString() {
-        return "DuenoMascota{" + "cedula=" + cedula + ", apellido=" + apellido + '}';
     }
 }  
   

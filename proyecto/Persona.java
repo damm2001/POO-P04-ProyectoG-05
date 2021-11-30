@@ -1,7 +1,6 @@
 
 package proyecto;
 
-
 public abstract class Persona {
    
     protected String nombre;
@@ -19,7 +18,4 @@ public abstract class Persona {
 
     public Persona() {
     }
-
-  
-    
 }

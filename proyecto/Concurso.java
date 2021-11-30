@@ -15,7 +15,7 @@ public class Concurso {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private Ciudad ciudad; 
-    private ArrayList<Premio> premios = new ArrayList<Premio>();//Crear Clase
+    private ArrayList<Premio> premios = new ArrayList<Premio>();
     private ArrayList<Auspiciante> auspiciantesC =new ArrayList<Auspiciante>();
     private String lugar;
     private TipoMascota dirigido;
@@ -160,7 +160,7 @@ public class Concurso {
             concursos.add(concurso);
             
             System.out.println("Concurso creado.");
-            System.out.println("\n1.-Seguir creando Concursos \n2.-Salir");
+            System.out.println("\n1.-Crear Concurso \n2.-Salir");
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
@@ -181,12 +181,8 @@ public class Concurso {
     }
     
     public static void inscribirParticipantes(int id){
-        
         Scanner sc=new Scanner(System.in);
-
-        
         for(Concurso c: concursosAbiertos){
-
             if(c.idConcurso==id ){
                 
                 System.out.println("Nombre,  Tipo de Mascota,  ID");
@@ -196,7 +192,7 @@ public class Concurso {
                 sc.nextLine();
                 System.out.print("Mascota inscrita.\n");
                 for (Mascota m:Mascota.mascotas){
-                    if(m.getIdMascota()==idM){
+                    if(m.getIdMascota()==idM && c.dirigido.equals(m.getTipo())){
                         c.mascotasInscrita.add(m);
                         Mascota.mascotasQueParticiparon.add(m);
                     }

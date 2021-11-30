@@ -13,11 +13,9 @@ import static proyecto.DuenoMascota.duenosMascota;
 import static proyecto.Mascota.*;
 
 public class Main {
-    
     static Scanner sc = new Scanner(System.in);
     
     public static void metodoMenu(){
-        
         System.out.println("1. Administrar Concursos\n2. Administrar Dueños\n3. Administrar Mascotas");
         System.out.print("\nElija una opcion: ");
         String opcion=sc.nextLine();
@@ -35,7 +33,6 @@ public class Main {
     }
     
     public static void admConcurso(){
-       
         System.out.println("1. Crear Concurso\n2. Inscribir Participante\n3. Regresar al menú principal");
         System.out.print("\nElija una opcion: ");
         String opcion=sc.nextLine();

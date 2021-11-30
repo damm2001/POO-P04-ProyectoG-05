@@ -4,8 +4,6 @@ package proyecto;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 public class Auspiciante extends Persona {
     
     private String webpage;

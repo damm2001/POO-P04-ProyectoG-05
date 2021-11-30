@@ -52,10 +52,4 @@ public class Ciudad {
 
     public Ciudad() {
     }
-    
-    ///prueba, borrar mas tarde
-    public static void main(String args[]) {
-        agregarCiudades();
-        mostrarCiudades();
-    }
 }

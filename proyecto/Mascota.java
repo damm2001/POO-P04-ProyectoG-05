@@ -110,6 +110,10 @@ public class Mascota {
     public int getIdMascota() {
         return idMascota;
     }
+
+    public TipoMascota getTipo(){
+        return tipo;
+    }
     
     @Override
     public String toString() {
