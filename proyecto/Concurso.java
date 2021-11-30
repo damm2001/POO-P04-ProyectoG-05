@@ -78,6 +78,7 @@ public class Concurso {
             }
             if (n==0){
                 System.out.println("Ciudad no registrada en el sistema.");
+                System.out.println("Regresando al menú principal\n");
                 metodoMenu();
             }
             
@@ -185,9 +186,10 @@ public class Concurso {
             if(c.idConcurso==id){
                 System.out.println("Nombre,  Tipo de Mascota,  ID");
                 Mascota.mostrarMascotas();
-                System.out.print("Ingrese el ID de la mascota: ");
+                System.out.print("\nIngrese el ID de la mascota: ");
                 int idM= sc.nextInt();
                 sc.nextLine();
+                System.out.print("Mascota inscrita.\n");
                 for (Mascota m:Mascota.mascotas){
                     if(m.getIdMascota()==idM){
                         c.mascotasInscrita.add(m);
@@ -196,6 +198,7 @@ public class Concurso {
             }
         }
     }
+
     @Override
     public String toString() {
         return "Concurso: " + nombre + "   Codigo: " + idConcurso ;

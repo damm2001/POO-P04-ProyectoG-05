@@ -44,9 +44,10 @@ public class Main {
             metodoMenu();
         } else if(opcion.equals("2")){
             Concurso.mostrarConcursosAbiertos();
-            System.out.print("Ingrese el codigo del concurso: ");
+            System.out.print("\nIngrese el codigo del concurso: ");
             int cod= sc.nextInt();
             sc.nextLine();
+            System.out.println();
             Concurso.inscribirParticipantes(cod);
             metodoMenu();
         } else if(opcion.equals("3")){

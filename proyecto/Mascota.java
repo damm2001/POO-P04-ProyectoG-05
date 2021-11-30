@@ -110,7 +110,7 @@ public class Mascota {
     
     @Override
     public String toString() {
-        return nombre + "   " + tipo + "   " + idMascota;
+        return nombre + ",     " + tipo + ",      " + idMascota;
     }
 
     
