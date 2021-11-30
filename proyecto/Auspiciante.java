@@ -46,7 +46,7 @@ public class Auspiciante extends Persona {
     }
 
     public static void mostrarAuspiciantes(){
-        if (!auspiciantes.isEmpty()){
+        if (!auspiciantes.isEmpty()){ //!(auspiciantes.size()==0)
             System.out.println("LISTA DE AUSPICIANTES:");
             int n=1;
             for(Auspiciante a:auspiciantes){

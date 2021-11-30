@@ -7,6 +7,7 @@ import java.util.Scanner;
 import static proyecto.DuenoMascota.duenosMascota;
 
 public class Mascota {
+    
     private String nombre;
     private TipoMascota tipo;
     private String raza;
@@ -83,7 +84,7 @@ public class Mascota {
     
     
     public static void mostrarMascotas(){
-        if (!mascotas.isEmpty()){
+        if (!mascotas.isEmpty()){ //!(mascotas.size()==0)
             System.out.println("Lista de Mascotas:");
             int n=1;
             for(Mascota m:mascotas){

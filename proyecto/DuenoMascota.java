@@ -54,7 +54,7 @@ public class DuenoMascota extends Persona {
     }
     
     public static void mostrarDueños(){
-        if (!duenosMascota.isEmpty()){
+        if (!duenosMascota.isEmpty()){ //!(duenoMascota.size()==0)
             System.out.println("Lista de Dueños:");
             int n=1;
             for(DuenoMascota d:duenosMascota){
