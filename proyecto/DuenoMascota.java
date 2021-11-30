@@ -105,11 +105,5 @@ public class DuenoMascota extends Persona {
     @Override
     public String toString() {
         return "DuenoMascota{" + "cedula=" + cedula + ", apellido=" + apellido + '}';
-    }
-    
-    public static void main(String args[]) {
-        agregarDueños();
-        mostrarDueños();
-    }
-    
+    }  
 }   
