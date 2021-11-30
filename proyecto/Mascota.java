@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static proyecto.DuenoMascota.duenosMascota;
-
+import static proyecto.Main.*;
 public class Mascota {
     
     private String nombre;
@@ -101,28 +101,21 @@ public class Mascota {
         System.out.print("Ingrese el id de la mascota: ");
         int id = sc.nextInt();
         sc.nextLine();
+        int b=mascotasQueParticiparon.size();
+        int a=0;
 
-        int b=0;
-        for (Mascota m:mascotas){
-            if (m.idMascota==id){
-                b+=1;
+        for(Mascota m:mascotasQueParticiparon){
+            if(m.idMascota==id){
+                mascotas.remove(m);
+                System.out.println("Mascota eliminada\n");
+                metodoMenu();
+            }else{
+                a+=1;
             }
         }
-        if (b!=0){
-            if (id<=mascotas.size()){
-                int ind=mascotas.indexOf(mascotas.get());
-                if (id==mascotas.get(ind).getIdMascota()){
-                    mascotas.remove(mascotas.get(ind));
-                    System.out.println("Mascota eliminada.\n");
-                }else{
-                    System.out.println("Id no encontrado.\nRegresando al menu principal\n");
-                }
-            }else{
-                System.out.println("Id incorrecto.\nRegresando al menu principal\n");
-            }
-        }else{
-            System.out.println("Id no registrado.\n");
-        } 
+        if(a>=b){
+            System.out.println("ID no encontrado\nRegresando al menu principal\n");
+        }
     }
 
     public int getIdMascota() {
