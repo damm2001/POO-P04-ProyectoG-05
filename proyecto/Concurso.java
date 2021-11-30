@@ -1,12 +1,13 @@
 
 package proyecto;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
+import static proyecto.Main.*;
 import static proyecto.Auspiciante.auspiciantes;
 import static proyecto.Ciudad.ciudades;
-import static proyecto.Main.*;
 
 public class Concurso {
     
