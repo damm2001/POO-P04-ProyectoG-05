@@ -47,7 +47,7 @@ public class Ciudad {
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
-        }sc.close();
+        }
     }
 
     public Ciudad() {

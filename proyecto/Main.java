@@ -10,7 +10,7 @@ import static proyecto.Auspiciante.auspiciantes;
 import static proyecto.Ciudad.ciudades;
 import static proyecto.Concurso.concursos;
 import static proyecto.DuenoMascota.duenosMascota;
-import static proyecto.Mascota.mascotas;
+import static proyecto.Mascota.*;
 
 public class Main {
     
@@ -118,15 +118,15 @@ public class Main {
         
         //Creacion y agregacion de las mascotas
         Mascota m1= new Mascota("Max",TipoMascota.Perro,"Golden",LocalDate.parse("2018-10-30"),"foto",d1);
-        Mascota m2= new Mascota("Nina",TipoMascota.Perro,"Pekines",LocalDate.parse("2015-12-30"),"foto",d1);
-        Mascota m3= new Mascota("Cooper",TipoMascota.Perro,"Shitzu",LocalDate.parse("2019-04-18"),"foto",d1);
-        Mascota m4= new Mascota("Mike",TipoMascota.Perro,"Schnauzer",LocalDate.parse("2012-05-10"),"foto",d1);
-        Mascota m5= new Mascota("Beto",TipoMascota.Perro,"Pitbull",LocalDate.parse("2007-09-28"),"foto",d1);
-        Mascota m6= new Mascota("Temari",TipoMascota.Gato,"Persa",LocalDate.parse("2016-08-22"),"foto",d1);
-        Mascota m7= new Mascota("Felix",TipoMascota.Gato,"Bengala",LocalDate.parse("2010-06-15"),"foto",d1);
-        Mascota m8= new Mascota("Figaro",TipoMascota.Gato,"Siamés",LocalDate.parse("2011-04-18"),"foto",d1);
-        Mascota m9= new Mascota("Gatsby",TipoMascota.Gato,"Siberiano",LocalDate.parse("2019-10-08"),"foto",d1);
-        Mascota m10= new Mascota("Coco",TipoMascota.Gato,"Munchkin",LocalDate.parse("2020-02-10"),"foto",d1);
+        Mascota m2= new Mascota("Nina",TipoMascota.Perro,"Pekines",LocalDate.parse("2015-12-30"),"foto",d2);
+        Mascota m3= new Mascota("Cooper",TipoMascota.Perro,"Shitzu",LocalDate.parse("2019-04-18"),"foto",d3);
+        Mascota m4= new Mascota("Mike",TipoMascota.Perro,"Schnauzer",LocalDate.parse("2012-05-10"),"foto",d4);
+        Mascota m5= new Mascota("Beto",TipoMascota.Perro,"Pitbull",LocalDate.parse("2007-09-28"),"foto",d5);
+        Mascota m6= new Mascota("Temari",TipoMascota.Gato,"Persa",LocalDate.parse("2016-08-22"),"foto",d6);
+        Mascota m7= new Mascota("Felix",TipoMascota.Gato,"Bengala",LocalDate.parse("2010-06-15"),"foto",d7);
+        Mascota m8= new Mascota("Figaro",TipoMascota.Gato,"Siamés",LocalDate.parse("2011-04-18"),"foto",d8);
+        Mascota m9= new Mascota("Gatsby",TipoMascota.Gato,"Siberiano",LocalDate.parse("2019-10-08"),"foto",d9);
+        Mascota m10= new Mascota("Coco",TipoMascota.Gato,"Munchkin",LocalDate.parse("2020-02-10"),"foto",d10);
         mascotas.add(m1);
         mascotas.add(m2);
         mascotas.add(m3);
@@ -204,6 +204,12 @@ public class Main {
         mascInscritas2.add(m10);
         c.setMascotasInscrita(mascInscritas);
         concursos.add(con1);
+
+
+        for(Mascota m:mascotas){
+            mascotasQueParticiparon.add(m);
+        }
+
         metodoMenu();
      }  
 }

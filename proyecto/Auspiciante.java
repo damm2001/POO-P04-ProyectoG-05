@@ -44,7 +44,7 @@ public class Auspiciante extends Persona {
             System.out.print("\nOpción del usuario: ");
             opcion_user = sc.nextInt();
             sc.nextLine();
-        }sc.close();
+        }
     }
 
     public static void mostrarAuspiciantes(){

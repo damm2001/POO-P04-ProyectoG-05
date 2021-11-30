@@ -16,6 +16,7 @@ public class Mascota {
     private static int lastID;
     private int idMascota;
     public static ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
+    public static ArrayList<Mascota> mascotasQueParticiparon = new ArrayList<Mascota>();
 
     public Mascota(String nombre, TipoMascota tipo, String raza, LocalDate fechaNacimiento, String foto, DuenoMascota dueno) {
         this.nombre = nombre;
@@ -98,11 +99,11 @@ public class Mascota {
         System.out.print("Ingrese el id de la mascota: ");
             int id = sc.nextInt();
             sc.nextLine();
-            mascotas.forEach(m-> {
+            for(Mascota m:mascotasQueParticiparon){
                 if(m.getIdMascota()==id){
                    mascotas.remove(m);
                 }
-            });
+            };
         
     }
     public int getIdMascota() {
