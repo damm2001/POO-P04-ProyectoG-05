@@ -201,17 +201,17 @@ public class Concurso {
                         System.out.println("Mascota inscrita.\n");
                         metodoMenu();
                     }else{
-                        if (Mascota.mascotas.size() < idM ){
-                            System.out.println("Id no encontrado\n");
-                       }else{
-                            System.out.println("El concurso no está dirigido al tipo de mascota dado\n ");
-                        }}metodoMenu();
-                }}
-                    else{
-                    System.out.println("Codigo de concurso incorrecto\nRegresando al menú principal\n");
+                        System.out.println("El concurso no está dirigido al tipo de mascota dado\nRegresando al menu principal\n");
+                        }metodoMenu();
+                }else{
+                    System.out.println("Id no encontrado\nRegresando al menu principal\n");
                     metodoMenu();
                 }
-            }
+            }else{
+                System.out.println("Codigo de concurso incorrecto\nRegresando al menú principal\n");
+                metodoMenu();
+                }
+        }
     }
 
     @Override

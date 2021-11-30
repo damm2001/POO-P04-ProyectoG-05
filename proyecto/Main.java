@@ -205,7 +205,6 @@ public class Main {
         c.setMascotasInscrita(mascInscritas);
         concursos.add(con1);
 
-
         for(Mascota m:mascotas){
             mascotasQueParticiparon.add(m);
         }
