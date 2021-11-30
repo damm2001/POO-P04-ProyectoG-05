@@ -102,16 +102,26 @@ public class Mascota {
         int id = sc.nextInt();
         sc.nextLine();
 
-        if (id<=mascotas.size()){
-            int ind=id-1;
-            if (id==mascotas.get(ind).getIdMascota()){
-                mascotas.remove(mascotas.get(ind));
-                System.out.println("Mascota eliminada.\n");
+        int b=0;
+        for (Mascota m:mascotas){
+            if (m.idMascota==id){
+                b+=1;
+            }
+        }
+        if (b!=0){
+            if (id<=mascotas.size()){
+                int ind=mascotas.indexOf(mascotas.get());
+                if (id==mascotas.get(ind).getIdMascota()){
+                    mascotas.remove(mascotas.get(ind));
+                    System.out.println("Mascota eliminada.\n");
+                }else{
+                    System.out.println("Id no encontrado.\nRegresando al menu principal\n");
+                }
             }else{
-                System.out.println("Id no encontrado.\nRegresando al menu principal\n");
+                System.out.println("Id incorrecto.\nRegresando al menu principal\n");
             }
         }else{
-            System.out.println("Id incorrecto.\nRegresando al menu principal\n");
+            System.out.println("Id no registrado.\n");
         } 
     }
 
