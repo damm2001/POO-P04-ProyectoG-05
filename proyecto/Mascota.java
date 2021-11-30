@@ -59,13 +59,16 @@ public class Mascota {
             System.out.print("\nIngrese el nombre del dueño: ");
             String dueno1 = sc.nextLine();
 
-            DuenoMascota dueno= new DuenoMascota();
+            DuenoMascota dueno= null;
             for(DuenoMascota d:duenosMascota){
                 if (dueno1.equals(d.getNombre())){
                    dueno= d; 
                 }
             }
-            
+            if(dueno==null){
+                System.out.println("Dueño no encontrado\nRegresando al menu principal\n");
+                metodoMenu();
+            }
             //creacion de mascota
             Mascota mascota= new Mascota(nom,tipoF,raza,fechaNacimiento,foto,dueno);
             System.out.println("Mascota ingresada");
