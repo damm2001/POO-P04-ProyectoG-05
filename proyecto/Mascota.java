@@ -40,9 +40,9 @@ public class Mascota {
             System.out.print("Ingrese si es Perro o Gato: ");
             String tipo = sc.nextLine();
             TipoMascota tipoF= null;
-            if (tipo.equals("Perro")){
+            if (tipo.equals("Perro") || tipo.equals("perro")){
                 tipoF= TipoMascota.Perro;
-            }else if(tipo.equals("Gato")){
+            }else if(tipo.equals("Gato") || tipo.equals("gato")){
                 tipoF= TipoMascota.Gato;
             }
             
@@ -51,7 +51,7 @@ public class Mascota {
             System.out.print("Ingrese la fecha de nacimiento con el formato YYYY-MM-DD: ");
             String fecha= sc.nextLine();
             LocalDate fechaNacimiento=LocalDate.parse(fecha);
-            System.out.print("Ingrese la foto: ");
+            System.out.print("Ingrese la foto: "); //Dato pendiente para el segundo parcial
             String foto = sc.nextLine();
             System.out.println();
             DuenoMascota.mostrarDueños();
@@ -129,6 +129,6 @@ public class Mascota {
     }
     
     public String toString() {
-        return nombre + ",     " + tipo + ",      " + idMascota;
+        return nombre + "      " + tipo + "       " + idMascota;
     }
 }
