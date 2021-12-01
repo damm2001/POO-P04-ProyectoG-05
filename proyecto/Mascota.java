@@ -127,8 +127,4 @@ public class Mascota {
     public TipoMascota getTipo(){
         return tipo;
     }
-    
-    public String toString() {
-        return nombre + "      " + tipo + "       " + idMascota;
-    }
 }
