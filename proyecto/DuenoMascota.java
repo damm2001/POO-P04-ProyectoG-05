@@ -60,10 +60,10 @@ public class DuenoMascota extends Persona {
 
         if (!duenosMascota.isEmpty()){ //!(duenoMascota.size()==0)
             System.out.println("Lista de Dueños:");
-            System.out.println("Nombre Apellido     Cedula");
+            System.out.printf("%5s %25s %15s %n","#","Nombre - Apellido","Cedula");
             int n=1;
             for(DuenoMascota d:duenosMascota){
-                System.out.println(n+".- "+d.toString());
+                System.out.printf("%5s %25s %15s %n",n,d.nombre+" - "+d.apellido,d.cedula);
                 n++;
             }
         }else{
@@ -107,10 +107,6 @@ public class DuenoMascota extends Persona {
 
     public String getNombre() {
         return nombre;
-    }
-
-    public String toString(){
-        return nombre+" "+apellido+"        "+cedula;
     }
 }  
   
