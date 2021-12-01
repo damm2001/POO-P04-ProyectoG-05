@@ -185,7 +185,6 @@ public class Concurso {
         for(Concurso c: concursosAbiertos){
             if(c.idConcurso==id ){
                 
-                System.out.println("Nombre   Tipo de Mascota   Id");
                 Mascota.mostrarMascotas();
                 System.out.print("\nIngrese el ID de la mascota: ");
                 int idM= sc.nextInt();
