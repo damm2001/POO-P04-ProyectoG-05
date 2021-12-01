@@ -10,10 +10,11 @@ public class DuenoMascota extends Persona {
     protected String apellido;
     public static ArrayList<DuenoMascota> duenosMascota = new ArrayList<DuenoMascota>();
 
-    public DuenoMascota(String nombre, String direccion, String telefono, String email, String cedula, String apellido) {
+    public DuenoMascota(String nombre, String direccion, String telefono, String email, String cedula, String apellido, Ciudad ciudad){
         super(nombre, direccion, telefono, email);
         this.cedula = cedula;
         this.apellido = apellido;
+        this.ciudad=ciudad;
     }
 
     public DuenoMascota() {}
@@ -34,13 +35,16 @@ public class DuenoMascota extends Persona {
             String dic = sc.nextLine();
             System.out.print("Ingrese el numero de telefono del dueño: ");
             String telf = sc.nextLine();
-            System.out.print("Ingrese la ciudad: ");
+            System.out.print("Ingrese el nombre de la ciudad: ");
             String ciud = sc.nextLine();
+            System.out.print("Ingrese el nombre de la provincia de la ciudad: ");
+            String prov = sc.nextLine();
             System.out.print("Ingrese el email del dueño: ");
             String email = sc.nextLine();
             
             //Creacion del dueño
-            DuenoMascota dueno= new DuenoMascota(nom,dic,telf,email,ced,ap);
+            DuenoMascota dueno= new DuenoMascota(nom,dic,telf,email,ced,ap,new Ciudad(ciud,prov));
+           
             //Agregamos al dueño al regsitro
             duenosMascota.add(dueno);
             System.out.println("Dueño creado.");
@@ -56,9 +60,10 @@ public class DuenoMascota extends Persona {
 
         if (!duenosMascota.isEmpty()){ //!(duenoMascota.size()==0)
             System.out.println("Lista de Dueños:");
+            System.out.println("Nombre Apellido     Cedula");
             int n=1;
             for(DuenoMascota d:duenosMascota){
-                System.out.println(n+".- "+d.nombre);
+                System.out.println(n+".- "+d.toString());
                 n++;
             }
         }else{
@@ -95,11 +100,17 @@ public class DuenoMascota extends Persona {
         }
         if (m==0){
             System.out.println("Cedula no registrada en el sistema\nRegresando al menu principal\n");
+        }else{
+            System.out.println();
         }
     }
 
     public String getNombre() {
         return nombre;
+    }
+
+    public String toString(){
+        return nombre+" "+apellido+"        "+cedula;
     }
 }  
   
