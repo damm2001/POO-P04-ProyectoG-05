@@ -11,9 +11,10 @@ public class Auspiciante extends Persona {
     public int id_sponsor;
     public static ArrayList<Auspiciante> auspiciantes = new ArrayList<Auspiciante>();
 
-    public Auspiciante(String nombre, String direccion, String telefono, String email,String webpage) {
+    public Auspiciante(String nombre, String direccion, String telefono, String email,String webpage, Ciudad ciudad){
         super(nombre, direccion, telefono, email);
         this.webpage = webpage;
+        this.ciudad=ciudad;
         id_sponsor= sponsor+1;
         sponsor =   id_sponsor;
     }
@@ -29,11 +30,15 @@ public class Auspiciante extends Persona {
             String direccion=sc.nextLine();
             System.out.print("Ingrese el numero de telefono del auspiciante: ");
             String telefono=sc.nextLine();
+            System.out.print("Ingrese el nombre de la ciudad: ");
+            String ciud = sc.nextLine();
+            System.out.print("Ingrese el nombre de la provincia de la ciudad: ");
+            String prov = sc.nextLine();
             System.out.print("Ingrese el email del auspiciante: ");
             String email=sc.nextLine();
             System.out.print("Ingrese el nombre de la pagina web del auspiciante: ");
             String webpage=sc.nextLine();
-            Auspiciante a=new Auspiciante(nombre,direccion,telefono,email,webpage);
+            Auspiciante a=new Auspiciante(nombre,direccion,telefono,email,webpage,new Ciudad(ciud,prov));
             auspiciantes.add(a);
         
             System.out.println("Auspiciante ingresado.");
