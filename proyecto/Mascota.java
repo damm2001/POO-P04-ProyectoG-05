@@ -88,6 +88,7 @@ public class Mascota {
     public static void mostrarMascotas(){
         if (!mascotas.isEmpty()){ //!(mascotas.size()==0)
             System.out.println("Lista de Mascotas:");
+            System.out.println("Nombre    Tipo Mascota   Id");
             int n=1;
             for(Mascota m:mascotas){
                 System.out.println(n+".- "+m.toString());
@@ -127,10 +128,7 @@ public class Mascota {
         return tipo;
     }
     
-    @Override
     public String toString() {
         return nombre + ",     " + tipo + ",      " + idMascota;
     }
-
-    
 }
