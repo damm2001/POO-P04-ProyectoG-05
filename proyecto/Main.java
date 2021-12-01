@@ -92,18 +92,26 @@ public class Main {
     }
     
     public static void main(String[] args) {
+
+        //Creacion y agregacion de las ciudades
+        Ciudad c1= new Ciudad("Guayaquil","Guayas");
+        Ciudad c2= new Ciudad("Quito","Pichinca");
+        Ciudad c3= new Ciudad("Cuenca","Azuay");
+        ciudades.add(c1);
+        ciudades.add(c2);
+        ciudades.add(c3);
         
         //Creacion y agregacion de los dueños
-        DuenoMascota d1= new DuenoMascota("Michael","Avenida de las Americas","0988093309","mvelastegui2000@gmail.com","0928046389","Velastegui");
-        DuenoMascota d2= new DuenoMascota("Diego","Ciudad Celeste","0988093309","diego2001martinez@gmail.com","0926409699","Martinez");
-        DuenoMascota d3= new DuenoMascota("Kenyi","Samanes","0983717401","ktrivino@espole.edu.ec","0928363763","Triviño");
-        DuenoMascota d4= new DuenoMascota("Meiyin","Centro","0992762653","mchang@gespol.edu.ec","0992563553","Chang");
-        DuenoMascota d5= new DuenoMascota("Jose","Villaclub","0826355352","jzambramo@gmail.com","0982876621","Zambrano");
-        DuenoMascota d6= new DuenoMascota("Arianna","Isla Sol","8177662267","acorrea@gmail.com","0971652514","Correa");
-        DuenoMascota d7= new DuenoMascota("Elizabeth","San Bernardo","0996152410","elijara@gmail.com","0972581862","Jara");
-        DuenoMascota d8= new DuenoMascota("Isabella","Santa Maria de Casa Grande","0982552141","isavergara@hotmail.com","0986162536","Vergara");
-        DuenoMascota d9= new DuenoMascota("Mya","Vista Sol","0998726838","myamacias@hotmail.com","0992752471","Macias");
-        DuenoMascota d10= new DuenoMascota("Emily","Laguna del Sol","0952627882","emilyrodrig@hotmail.com","0986252537","Rodriguez");
+        DuenoMascota d1= new DuenoMascota("Michael","Avenida de las Americas","0988093309","mvelastegui2000@gmail.com","0928046389","Velastegui",c1);
+        DuenoMascota d2= new DuenoMascota("Diego","Ciudad Celeste","0988093309","diego2001martinez@gmail.com","0926409699","Martinez",c1);
+        DuenoMascota d3= new DuenoMascota("Kenyi","Samanes","0983717401","ktrivino@espole.edu.ec","0928363763","Triviño",c1);
+        DuenoMascota d4= new DuenoMascota("Meiyin","Centro","0992762653","mchang@gespol.edu.ec","0992563553","Chang",c1);
+        DuenoMascota d5= new DuenoMascota("Jose","Villaclub","0826355352","jzambramo@gmail.com","0982876621","Zambrano",c2);
+        DuenoMascota d6= new DuenoMascota("Arianna","Isla Sol","8177662267","acorrea@gmail.com","0971652514","Correa",c2);
+        DuenoMascota d7= new DuenoMascota("Elizabeth","San Bernardo","0996152410","elijara@gmail.com","0972581862","Jara",c2);
+        DuenoMascota d8= new DuenoMascota("Isabella","Santa Maria de Casa Grande","0982552141","isavergara@hotmail.com","0986162536","Vergara",c3);
+        DuenoMascota d9= new DuenoMascota("Mya","Vista Sol","0998726838","myamacias@hotmail.com","0992752471","Macias",c3);
+        DuenoMascota d10= new DuenoMascota("Emily","Laguna del Sol","0952627882","emilyrodrig@hotmail.com","0986252537","Rodriguez",c3);
         duenosMascota.add(d1);
         duenosMascota.add(d2);
         duenosMascota.add(d3);
@@ -137,18 +145,10 @@ public class Main {
         mascotas.add(m9);
         mascotas.add(m10);
         
-        //Creacion y agregacion de las ciudades
-        Ciudad c1= new Ciudad("Guayaquil","Guayas");
-        Ciudad c2= new Ciudad("Quito","Pichinca");
-        Ciudad c3= new Ciudad("Cuenca","Azuay");
-        ciudades.add(c1);
-        ciudades.add(c2);
-        ciudades.add(c3);
-        
         ////Creacion y agregacion de los auspiciantes
-        Auspiciante a1= new Auspiciante("Pilsener","Km. 16,5 Vía a Daule, Guayaquil","0988926529","pilsener@gmail.com","https://www.pilsener.com.ec");
-        Auspiciante a2= new Auspiciante("Banco de Guayaquil"," Av. Vicente Rocafuerte Bejarano 623","3730100","bguayaquildc@superbancos.gob.ec","https://www.bancoguayaquil.com");
-        Auspiciante a3= new Auspiciante("Kia Motors","Av. Luis Cordero Crespo entre Av. Americas","542542","kiamotors@gmail.com","https://www.kia.com.ec");
+        Auspiciante a1= new Auspiciante("Pilsener","Km. 16,5 Vía a Daule, Guayaquil","0988926529","pilsener@gmail.com","https://www.pilsener.com.ec",c1);
+        Auspiciante a2= new Auspiciante("Banco de Guayaquil"," Av. Vicente Rocafuerte Bejarano 623","3730100","bguayaquildc@superbancos.gob.ec","https://www.bancoguayaquil.com",c1);
+        Auspiciante a3= new Auspiciante("Kia Motors","Av. Luis Cordero Crespo entre Av. Americas","542542","kiamotors@gmail.com","https://www.kia.com.ec",c2);
         auspiciantes.add(a1);
         auspiciantes.add(a2);
         auspiciantes.add(a3);
