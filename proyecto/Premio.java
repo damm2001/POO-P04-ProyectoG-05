@@ -52,14 +52,11 @@ public class Premio {
         return premio;
     }
 
-    @Override
     public String toString() {
         if (auspiciante==null){
             return puesto+":"+descripcion+", no tiene auspiciante";
         }else{
             return puesto+": "+descripcion+", "+auspiciante;
-        }
-        
-    }
-    
+        }  
+    } 
 }
