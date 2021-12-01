@@ -88,10 +88,10 @@ public class Mascota {
     public static void mostrarMascotas(){
         if (!mascotas.isEmpty()){ //!(mascotas.size()==0)
             System.out.println("Lista de Mascotas:");
-            System.out.println("Nombre    Tipo Mascota   Id");
+            System.out.printf("%5s %10s %15s %10s %n","#","Nombre","Tipo Mascota","Id");
             int n=1;
             for(Mascota m:mascotas){
-                System.out.println(n+".- "+m.toString());
+                System.out.printf("%5s %10s %15s %10s %n",n,m.nombre,m.tipo,m.idMascota);
                 n++;
             }
         }else{
